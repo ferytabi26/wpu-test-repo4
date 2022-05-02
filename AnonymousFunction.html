@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>anonymousFunction</title>
+</head>
+<body>
+<script type="text/javascript">
+	const say = function(name){
+		document.writeln(`hello ${name}`);
+	}
+	say("evita");
+
+	function giveMeName(parameter1){
+		parameter1("fery");
+	}
+	//jika fungsinya belum dibuat,maka bisa langsung dibuat didalam parameter tanpa memberi nama dahulu(anonymous function), atau functionnya sangat simple maka bisa langsung saja buat functionnya di parameter
+	giveMeName(function(name){
+		document.writeln(`<p> hello ${name} </p>`);
+	})
+
+	/////////////////////////////////////////////
+	function perkalian(a,b){
+		return a*b;
+	}
+	function penjumlahan(a,b){
+		return a+b;
+	}
+
+	function aritmetika(functionKali,functionJumlah,a,b){
+		return functionKali(a,b)+functionJumlah(a,b);
+	}
+	
+	document.writeln(`${aritmetika(perkalian,penjumlahan,3,2)}`);
+
+
+</script>
+</body>
+</html>
